@@ -68,6 +68,56 @@ button:active {
     background: #a3061b; /* Rouge foncé */
     transform: scale(0.95); /* Effet d'enfoncement */
 }
+
+#telechargement {
+    display: inline-flex; /* Utiliser flexbox pour aligner l'icône et le texte */
+    align-items: center;  /* Centrer verticalement le texte et l'icône */
+    padding: 10px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    background: #e30922;
+    box-shadow: 2px 2px 2px #794848;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.4s ease-in-out;
+}
+
+#telechargement::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #eb5954;
+    transition: left 0.2s ease-in-out;
+    z-index: 0;
+}
+
+#telechargement:hover::before {
+    left: 0;
+}
+
+#telechargement:hover {
+    color: white;
+}
+
+#telechargement span {
+    margin-right: 8px;  /* Ajouter un espace entre le texte et l'icône */
+}
+
+#telechargement span, i {
+    position: relative;
+    z-index: 1;
+}
+
+#telechargement:active {
+    background: #a3061b; /* Rouge foncé */
+    transform: scale(0.95); /* Effet d'enfoncement */
+}
+
+
 img {
     width: 200px;
     height: auto;
