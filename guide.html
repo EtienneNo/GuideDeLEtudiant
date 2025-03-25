@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=TON_API_KEY&callback=initMap" async defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Guide de l'etudiant</title>
+</head>
+<body>
+<nav role="navigation">
+    <div id="menuToggle">
+        <!--
+        A fake / hidden checkbox is used as click reciever,
+        so you can use the :checked selector on it.
+        -->
+        <input type="checkbox" id="menuCheckbox" />
+
+        <!--
+        Some spans to act as a hamburger.
+
+        They are acting like a real hamburger,
+        not that McDonalds stuff.
+        -->
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <!--
+        Too bad the menu has to be inside of the button
+        but hey, it's pure CSS magic.
+        -->
+        <ul id="menu">
+            <!--
+            We can use a label here to close upon click (when doing same page navigation), this
+            does require a slight bit of JS.
+            -->
+            <li>
+                <a href="#restauration">
+                    <label for="menuCheckbox" onclick="this.parentNode.click();">La restauration a proximité</label>
+                </a>
+            </li>
+            <li>
+                <a href="#avantages">
+                    <label for="menuCheckbox" onclick="this.parentNode.click();">Les avantages de l'étiduant</label>
+                </a>
+            </li>
+            <li>
+                <a href="#docu">
+                    <label for="menuCheckbox" onclick="this.parentNode.click();">Les centres de documentation et de revisions</label>
+                </a>
+            </li>
+            <li>
+                <a href="#infospratiques">
+                    <label for="menuCheckbox" onclick="this.parentNode.click();">Informations pratiques</label>
+                </a>
+            </li>
+            <li>
+                <a href="#contact">
+                    <label for="menuCheckbox" onclick="this.parentNode.click();">Contacts utiles</label>
+                </a>
+            </li>
+
+
+            <!-- Or just use regular URLs -->
+            <li>
+                <a href="https://moodle.iut-tlse3.fr" target="_blank">Moodle</a>
+            </li>
+            <li>
+                <a href="https://edt.iut-tlse3.fr/planning/info/" target="_blank">Emploi du temps</a>
+            </li>
+            <li>
+                <a href="https://iut.univ-tlse3.fr" target="_blank">Site de l'IUT</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<main>
+    <h1>Le guide de l'étudiant</h1>
+    <h2 id="restauration">La restauration a proximité</h2>
+
+    <h3>Cafétéria des Oliviers</h3>
+    <p>Un espace convivial proposant des sandwichs, salades et plats chauds à prix abordables. On peut aussi aller à la cafétéria juste pour être à l’abri dans un endroit chauffé. La cafétéria est le point de restauration le plus proche de l'IUT. De plus, elle est pratique quand on n'a pas forcément beaucoup de temps pour manger. Le menu Crous comporte un sandwich et un dessert (fruit ou compote).</p>
+    <p>Tripode C, 118 Av. de Rangueil, 31400 Toulouse</p>
+    <br>
+    <br>
+
+    <h3>Les réstaurants universitaires (RU)</h3>
+    <p>Les restaurants universitaires sont assez différents de la cafétéria. Le prix dépensé est le même (1€ pour les boursiers, 3€30 pour les non boursiers) mais les portions sont plus généreuses et les repas beaucoup plus équilibrés. En effet, le menu Crous comporte un plat principal et deux accompagnements (entrée, dessert) ce qui permet de mieux s'alimenter.</p>
+
+    <ul>
+        <li>RU Saint-Agne (3,5⭐)</li>
+        <p>Très bonnes portions, le goût est généralement un peu moins au rendez-vous même si tout est très largement mangeable. Souvent assez peu de gens, surtout en début d’année ou les autres RU sont souvent très engorgés.</p>
+        <li>RU Théorème (Paul Sabatier) (3,6⭐)</li>
+        <p>Les portions sont franchement honnêtes surtout dernièrement. De plus, les plats sont souvent très bons et variés. En effet, le RU Théorème comporte trois stands différents. Il y a un stand normal, mais aussi un stand pâtes et un stand grillades. Cela permet une très grande variété de repas. Néanmoins, en début d’année, ce RU a tendance à être très peuplé ce qui fait qu’il faut plus de temps pour faire la queue. La queue est à son pic vers 12h30, mais à 11h il y a assez peu de gens. Pensez à recharger votre compte Izly avant de rentrer dans le RU, car une fois à l'intérieur, il est compliqué d’avoir du réseau.</p>
+        <li>RU INSA (2,36⭐)</li>
+        <p>Ce RU n’est pas très bon que ça soit en goût ou en portions. L’avantage principal de ce RU est la proximité avec l’IUT et le débit. En effet, même quand il paraît très engorgé, on se retrouve à ne pas attendre très longtemps avant de manger</p>
+    </ul>
+
+    <h3>Les fast-foods</h3>
+    <p>De nombreuses options se trouvent aux alentours, notamment des kebabs, burgers et boulangeries à proximité de l’IUT. Il existe notamment des fast-foods situés juste à la sortie du métro Faculté de pharmacie et disposant d’un espace couvert pour manger.</p>
+
+    <ul>
+        <li>So Crousty</li>
+        <p>So Crousty est un fast-food dans lequel on peut manger des bols de poulet avec du riz, il existe trois sauces différentes. La nourriture est très bonne et les portions largement suffisantes. En effet, même la taille la plus petite est très généreuse et permet très largement de très bien se nourrir. De plus, il existe un menu étudiant qui permet d’avoir un bol L et une boisson pour la somme de 8€50. Les bols seuls sont sinon aux prix de 9 € pour un L, 11 € pour un XL, et 13 € pour un XXL, et cela, sans boisson.</p>
+        <li>Chamas Tacos</li>
+        <p>Chamas Tacos est un tacos plutôt comme les autres qui est bon et qui permet de manger en bonne quantité.</p>
+    </ul>
+    <p>Pour ceux qui n’ont pas de problème à se déplacer le midi, il y a d'autres fast-foods à quelques stations de métro voir directement à pied.</p>
+    <ul>
+        <li>KFC Saint-Agne</li>
+        <p>Offre étudiante, télécharger l’application pour être au courant de toutes les offres. 10 tenders pour 9€ le mardi.</p>
+        <li>McDo Rangueil</li>
+        <p>Un mcdo tout ce qu’il y a de plus classique.</p>
+        <li>Subway</li>
+        <p>Accessible 5min à pied de la station de métro Université Paul Sabatier, Subway est sans doute le meilleur rapport quantité/prix/goût pour un fast-food proche de l’IUT.
+            Possède aussi un tarif étudiant.
+        </p>
+    </ul>
+    <div class="warning">⚠ Attention, n'oubliez pas votre carte étudiante bien que certains fast-foods acceptent le certificat de scolarité pour appliquer les réductions étudiantes. ⚠</div>
+
+    <h2 id="avantages">Les avantages de l'etudiant</h2>
+    <h3>Les avantages à l'université</h3>
+    <p>Accès à des logiciels professionnels proposés gratuitement aux étudiants :</p>
+    <ul>
+        <a href="https://education.github.com/pack">Github Student</a><br>
+        <a href="https://www.office.com/">Suite Microsoft Office</a><br>
+        <a href="https://www.jetbrains.com/fr-fr/">Suite JetBrains</a><br>
+        <a href="https://alyze.info/">SEO Utils</a>
+    </ul>
+
+    <h3>Les avantages en dehors de l’université</h3>
+    <ul>
+        <li>Culture</li>
+        <p>Réductions pour les musées, cinémas, concerts</p>
+        <li>Transports</li>
+        <p>Tarifs étudiants pour le train, métro, bus et vélo</p>
+        <li>Commerces</li>
+        <p>Offres étudiantes en magasins, bars et événements</p>
+    </ul>
+
+    <h2 id="docu">Les centres de documentation et de révisions</h2>
+    <h3>Le CRDoc</h3>
+    <p>Centre de ressources documentaires spécialisé en informatique et sciences appliquées.</p><br><p>
+        2 salles de travail en groupe</p><p>
+        Les créneaux de réservation vont de 30 minutes à 3h. Les noms de toutes les personnes doivent être indiqués lors de la réservation.</p><br><p>
+        Capacité salle 1 : 3 à 8 personnes.</p><p>
+        Salle équipée d'une TV de projection et d'un tableau blanc mobile. Demander la télécommande et/ou les feutres à l’accueil.</p><br><p>
+        Capacité salle  2 : 3 à 6 personnes.</p><p>
+        Salle équipée d'un tableau blanc mobile. Demander les feutres à l’accueil.</p><br><p>
+        30 PC mis à disposition par CRDoc. Munissez-vous de vos passeports informatiques pour vous loguer à une session de 4 heures par jour.</p><p>
+        Pour les usagers extérieurs : vous pouvez vous loguer avec un compte invité sur demande à l’accueil du CRDoc.</p><p>
+        Tous les PC sont connectés à deux imprimantes, une NB et une couleur. Pour obtenir plus de détails sur le service Corep se reporter à la rubrique.</p><p>
+        Paiement par cartes COREP uniquement, distributeur de cartes sur place : Tarif et fonctionnement copies, impressions, scans</p><p>
+        Depuis votre ordinateur portable, votre tablette ou votre smartphone, vous pouvez imprimer en lançant votre impression à partir du Cloud : https://gespage.univ-tlse3.fr</p><p>
+        Muni de votre carte d'étudiant, vous pouvez emprunter un pc portable ou une tablette à la journée, pour une utilisation sur place uniquement.</p><p>
+        A la demande, auprès du personnel de l’accueil : prêt de casques audio, prises, feutres pour tableaux.</p><p>
+        Relieuse et agrafeuse en libre-service.</p><br><p>
+        Rendez au CRDoc vos documents empruntés dans les autres bibliothèques universitaires du réseau Toulouse Midi-Pyrénées</p><p>
+        Ne vous déplacez plus pour emprunter les livres d'une autre université ! Vous pouvez faire venir dans la BU de votre choix, les documents d'une autre bibliothèque du réseau universitaire Toulouse Midi-Pyrénées.</p><p>
+        Vous pouvez rendre vos documents, même en dehors des horaires d'ouverture, en les déposant dans les boîtes à retour site Ponsan ou Rangueil. Elles se situent sur le parvis des bâtiments centraux, à côté du parking du personnel à Ponsan et sous le porche GEA (Gestion des Entreprises et Administrations) à Rangueil.
+    </p>
+
+    <h3>Le CRIL</h3>
+    <p>A travers le CRIL, une triple volonté politique est mise en oeuvre à l'IUT  pour :</p><p>
+        offrir des solutions innovantes par l'apprentissage des langues</p><p>
+        développer et s'appuyer sur la recherche en didactique des langues (LAIRDIL)</p><p>
+        développer et soutenir, encadrer et renforcer l'axe international de l'IUT</p><p>
+        Ainsi, le CRIL a été conçu comme une structure globale gérant non seulement l'enseignement des langues avec l'apprentissage en autonomie guidée, en formation initiale et continue mais aussi la mobilité internationale étudiante en stage ou en poursuite d'études et la mobilité enseignante dans le cadre d'Erasmus.
+        Ce Centre se compose ainsi de différents espaces :</p><p>
+        1 espace d'auto-formation guidée, où les apprenants ont accès à des ressources en ligne et à des logiciels</p><p>
+        1 espace de lecture de revues en langues étrangères et en espace audio-visuel avec accès à des séries et films en langue étrangère</p><p>
+        3 salles polyvalentes et modulables pouvant accueillir des conférences, ateliers de conversation ou autres événements</p><p>
+        3 bureaux : Langues, Relations Internationales et Technicien Informatique
+    </p><br>
+    <p>Contacts et accès</p><p>
+        CRIL - IUT Toulouse - Auch - Castres</p><p>
+        Campus Rangueil</p><p>
+        129 B Av. de Rangueil BP 67701 F- 31077</p><p>
+        Toulouse Cedex 4</p><br><p>
+        Accueil : +33(0)5 62 25 89 66</p><p>
+        Bureau Relations Internationales +33(0)5 62 25 89 67   +33(0)5 62 25 89 68</p><p>
+        Bureau Langues : +33 (0)5 62 25 89 63</p>
+
+    <p>Le CRIL est situé à proximité du Département Génie Civil de l'IUT A', au 129B Avenue de Rangueil.</p><p>
+        L'entrée du parking se trouve au croisement de l'Avenue de Rangueil et du Chemin de la Pélude.</p><p>
+        Piétons : Prendre la ligne B, arrêt Faculté de Pharmacie.</p><p>
+        A la sortie du métro, prendre à droite et longer le trottoir.
+    </p>
+    <h3>La BU Paul-Sabatier</h3>
+    <p>Grande bibliothèque universitaire avec un large choix de ressources académiques. Les services de la BU:</p>
+    <ul>
+        <li>Emprunter</li>
+        <li>Salles de travail</li>
+        <li>Point copie</li>
+        <li>Ordinateurs en libre accès</li>
+        <li>Prêt d'ordinateurs portables</li>
+        <li>Accès personnes mobilité réduite</li>
+        <li>Wifi</li>
+        <li>Boîte à livres</li>
+        <li>Espace d'exposition</li>
+        <li>Navette</li>
+        <li>Ateliers des BU</li>
+        <li>Rendez-vous personnalisés</li>
+        <li>Suggestions d'achats</li>
+        <li>Accessibilité</li>
+    </ul>
+
+    <h2 id="infospratiques">Infos pratiques</h2>
+
+    <h3>Système de notation & règles de passage</h3>
+    <p>Les évaluations reposent sur un système de contrôle continu avec des notes sur 20. Un seuil de 10/20 est requis pour valider une UE. En première année, il existe 6 UE, pour passer l’année, il “suffit” de valider au moins 4 UE et de maintenir les 2 autres au dessus de 8/20. En deuxième année, on retrouve toujours les 6 mêmes UE mais pour passer en troisième année, c’est un peu différent. Il faut toujours valider au moins 4 UE et maintenir les autres au-dessus de 8/20. Certaines UE doivent néanmoins être impérativement validées: les UE non validées en première année et les UE non poursuivies en troisième année. En effet, en fin de première année, on doit choisir un parcours et cela détermine les 3 UE poursuivies en troisième année. Un cours magistral est donné au cours de la première année pour expliquer plus en détail le système de notation et les règles de passage.
+        Il existe un fichier excel ou vous pouvez rentrer vos notes pour pouvoir calculer rapidement les moyennes des ressources et des UE avec les coefficients officiels.
+    </p>
+    <div class="warning">⚠ Attention, les coefficients peuvent être amenés à changer en cours d’année, le fichier n’est là qu’à titre indicatif. ⚠ </div>
+
+    <h3>Organisation des cours & emploi du temps</h3>
+    <p>Les cours sont répartis en CM (cours magistraux), TD (travaux dirigés) et TP (travaux pratiques). L'emploi du temps est accessible via l'ENT.</p>
+
+    <h3>Outils numériques & plateformes utilisées</h3>
+    <ul>
+        <li>ENT</li>
+        <p>Plateforme principale pour les ressources et l'emploi du temps</p>
+        <li>Moodle</li>
+        <p>Supports de cours et exercices</p>
+        <li>Teams</li>
+        <p>Communication avec les enseignants</p>
+        <li>Gitlab de l'IUT</li>
+        <p>Gestion des projets informatiques implémentant git</p>
+    </ul>
+
+    <h2 id="contact">Contacts utiles</h2>
+    <ul>
+        <li>Sabine Bessou</li>
+        <p>Secrétaire du département, gestion des absences et dossiers administratifs. sabine.bessou@iut-tlse3.fr
+            Pour toute absence ou retard, vous devez vous adresser à info.abs@iut-tlse3.fr avec en pièce jointe un justificatif, qui peut être un arrêt du médecin, une photo d’un panneau qui affiche une panne de métro ou de bus etc…
+        </p>
+        <li>Fabienne Viallet</li>
+        <p>Responsable étudiante, aide pour les problèmes académiques et administratifs. Elle vous orientera vers le service adapté à votre besoin, par exemple vers l'infirmière de l’IUT Mme. Catherine Salles.
+            Vous pouvez vous adressez à elle sur l’adresse mail fabienne.viallet@iut-tlse3.fr </p>
+        <li>SIMPPS</li>
+        <p>Service de santé universitaire avec médecins, psychiatres et psychologues pour les étudiants.
+            Pour prendre rendez-vous appelez le 05 61 55 66 11, tous les rendez-vous sont 100 % gratuits.
+        </p>
+    </ul>
+</main>
+</body>
+</html>
